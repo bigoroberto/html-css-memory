@@ -1,0 +1,123 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clearfix::after{
+  content:"";
+  display: table;
+  clear: both;
+}
+
+body{
+  background-color: #ADD8E6;
+  font-family: 'Nerko One', cursive;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+}
+ /* header */
+header:first-child{
+  text-align: center;
+  color: white;
+  font-size: 60px;
+  text-shadow: 2px 2px black;
+}
+/* /header */
+
+/* main */
+main{
+  margin-bottom: 20px;
+}
+
+ul{
+  text-align: center;
+  list-style: none;
+  margin: auto;
+}
+
+.carta{
+  background-image: url(img/pattern.png);
+  background-size: contain;
+  width: 20%;
+  height: 300px;
+  display: inline-block;
+  margin: 1%;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: -18px -8px 22px -6px #000000;
+}
+
+.carta .immagine,.testo{
+  position: absolute;
+  visibility: hidden;
+}
+
+
+.testo{
+  bottom: 0;
+  font-size: 35px;
+  width: 100%;
+  color: #E67919;
+}
+
+.immagine{
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 90%;
+  height: 70%;
+  margin: auto;
+  left: 5%;
+}
+
+.airbaloon{
+  background-image: url(img/noun_air_balloon_3134741.png);
+}
+
+.bicycle{
+  background-image: url(img/noun_Bicycle_3134821.png);
+}
+
+.tram{
+  background-image: url(img/noun_Tram_3134750.png);
+}
+
+.cruis{
+  background-image: url(img/noun_Cruise_Ship_3134824.png);
+}
+
+.submarine{
+  background-image: url(img/noun_Submarine_3134738.png);
+}
+
+.tractor{
+  background-image: url(img/noun_Tractor_3134797.png);
+}
+
+.carta:hover .testo{
+  color: #E61986;
+  visibility: visible;
+}
+
+.carta:hover .immagine{
+  visibility: visible;
+}
+
+.carta:hover{
+  background-image: none;
+  background-color: white;
+}
+
+/* /main */
+
+/* Footer */
+footer h3{
+  text-align: center;
+  font-size: 30px;
+}
+/* /Footer */
