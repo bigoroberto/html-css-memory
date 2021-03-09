@@ -4,120 +4,81 @@
   box-sizing: border-box;
 }
 
-.clearfix::after{
-  content:"";
-  display: table;
-  clear: both;
-}
-
 body{
-  background-color: #ADD8E6;
   font-family: 'Nerko One', cursive;
+  background-color: #ADD8E6;
+  text-align: center;
+  font-size: 1.5em;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 }
 
 .container{
-  width: 80%;
+  width: 65%;
+  max-width: 900px;
   margin: auto;
 }
- /* header */
-header:first-child{
-  text-align: center;
+
+header{
+  margin-top: 10px;
   color: white;
-  font-size: 60px;
-  text-shadow: 2px 2px black;
-}
-/* /header */
-
-/* main */
-main{
-  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 1.8em;
 }
 
-ul{
-  text-align: center;
-  list-style: none;
-  margin: auto;
-}
+/* MAIN */
 
-.carta{
-  background-image: url(img/pattern.png);
-  background-size: contain;
-  width: 20%;
-  height: 300px;
+/* default */
+main .card-element{
+  position: relative;
   display: inline-block;
+  background-color: white;
+  width: 20%;
   margin: 1%;
   border-radius: 10px;
-  position: relative;
+  background-image: url("img/pattern.png");
+  background-size: contain;
   cursor: pointer;
-  box-shadow: -18px -8px 22px -6px #000000;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 }
 
-.carta .immagine,.testo{
-  position: absolute;
+main .card-element img{
+  width: 100%;
+  padding: 20px 20px 40px;
   visibility: hidden;
 }
 
-
-.testo{
-  bottom: 0;
-  font-size: 35px;
+main .card-element .card-text{
+  position:absolute;
+  bottom:0;
+  left: 0;
+  line-height: 40px;
   width: 100%;
-  color: #E67919;
+  color: fuchsia;
+  display: none;
 }
 
-.immagine{
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 90%;
-  height: 70%;
-  margin: auto;
-  left: 5%;
-}
-
-.airbaloon{
-  background-image: url(img/noun_air_balloon_3134741.png);
-}
-
-.bicycle{
-  background-image: url(img/noun_Bicycle_3134821.png);
-}
-
-.tram{
-  background-image: url(img/noun_Tram_3134750.png);
-}
-
-.cruis{
-  background-image: url(img/noun_Cruise_Ship_3134824.png);
-}
-
-.submarine{
-  background-image: url(img/noun_Submarine_3134738.png);
-}
-
-.tractor{
-  background-image: url(img/noun_Tractor_3134797.png);
-}
-
-.carta:hover .testo{
-  color: #E61986;
-  visibility: visible;
-}
-
-.carta:hover .immagine{
-  visibility: visible;
-}
-
-.carta:hover{
+/* ACTIVE */
+main .card-element.active,
+main .card-element:hover{
   background-image: none;
-  background-color: white;
 }
 
-/* /main */
-
-/* Footer */
-footer h3{
-  text-align: center;
-  font-size: 30px;
+main .card-element.active img,
+main .card-element.card-element:hover img{
+  visibility: visible;
 }
-/* /Footer */
+
+main .card-element.active .card-text,
+main .card-element:hover .card-text{
+  display: block;
+}
+
+main .card-element:hover .card-text{
+  color: coral;
+}
+
+
+footer{
+  font-size: 0.8em;
+  line-height: 80px;
+}
